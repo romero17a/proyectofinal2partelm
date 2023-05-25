@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Competiciones de liga
+{% endblock %}
+
+{% block content %}
+    <h1>Competiciones de liga</h1>
+    <ul>
+        {% for competicion in competiciones %}
+            <li>{{ competicion['league_name'] }} - Temporada {{ competicion['league_season'] }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

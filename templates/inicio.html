@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Inicio{% endblock %}
+{% block content %}
+<section class="about">
+    <div class="container">
+       <div class="row d_flex">
+            <div class="col-md-5">
+                <div class="titlepage">
+                    <h2>Listar paises</h2>
+                    <p>Te invitamos a hacer clic en el logotipo del mundo para explorar nuestro listado de destino internacionales. Tenemos una amplia seleccion de paises para descubrir, ¡No te lo puedes perder!</p>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="about_img">
+                    <a href="/paises"><img src="{{url_for('static', filename='img/mundo.jpg')}}" alt="Logo de MSX"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

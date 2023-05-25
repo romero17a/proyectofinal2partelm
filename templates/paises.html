@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Lista de Países
+{% endblock %}
+
+{% block content %}
+    <style>
+        img.bandera {
+            max-width: 50px;
+            max-height: 50px;
+        }
+    </style>
+
+    <h1>Lista de Países</h1>
+    <ul>
+        {% for pais in paises %}
+        <li>
+            <img src="{{ pais.country_logo }}" alt="Bandera de {{ pais.country_name }}" class="bandera">
+            {{ pais.country_name }}
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
